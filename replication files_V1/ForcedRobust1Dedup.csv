@@ -1,0 +1,14 @@
+,pe,lower,upper,var,group,subsetlabel
+1,,,,Endorsement:,NA,Forced Response
+1.01,0,0,0,  Low Endorsement,End,Forced Response
+1.02,-0.0027171,-0.0194852,0.014051,  High Endorsement,End,Forced Response
+1.1,,,, ,NA,Forced Response
+2,,,,Outlet Slant:,NA,Forced Response
+2.01,0.0104118,-0.0106067,0.03143,  Favored One's Own Party,Outlet,Forced Response
+2.02,0,0,0,  Neutral Outlet,Outlet,Forced Response
+2.03,-0.1015584,-0.1232144,-0.079902,  Favored The Other Party,Outlet,Forced Response
+2.1,,,,  ,NA,Forced Response
+3,,,,Message Slant:,NA,Forced Response
+3.01,0.0300216,0.0085741,0.051469,  Biased Towards One's Own Party,Msg,Forced Response
+3.02,0,0,0,  Neutral Message,Msg,Forced Response
+3.03,-0.1246649,-0.1462563,-0.103073,  Biased Towards The Other Party,Msg,Forced Response

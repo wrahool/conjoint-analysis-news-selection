@@ -1,0 +1,28 @@
+,pe,lower,upper,var,group,subsetlabel
+1,,,,Endorsement:,NA,Rated Response
+1.01,0,0,0,  Low Endorsement,End,Rated Response
+1.02,0.029417009,-0.059905933,0.11873995,  High Endorsement,End,Rated Response
+1.1,,,, ,NA,Rated Response
+2,,,,Outlet Slant:,NA,Rated Response
+2.01,-0.056280513,-0.160898491,0.04833747,  Favored One's Own Party,Outlet,Rated Response
+2.02,0,0,0,  Neutral Outlet,Outlet,Rated Response
+2.03,-0.377411207,-0.483918152,-0.27090426,  Favored The Other Party,Outlet,Rated Response
+2.1,,,,  ,NA,Rated Response
+3,,,,Message Slant:,NA,Rated Response
+3.01,0.136557248,0.03096847,0.24214603,  Biased Towards One's Own Party,Msg,Rated Response
+3.02,0,0,0,  Neutral Message,Msg,Rated Response
+3.03,-0.334165324,-0.445078385,-0.22325226,  Biased Towards The Other Party,Msg,Rated Response
+3.1,,,,   ,NA,Rated Response
+4,,,,Endorsement ¡Á Extreme Partisan:,NA,Rated Response
+4.01,0,0,0,  Low Endorsement ¡Á Extreme Partisan,EndExtreme,Rated Response
+4.02,-0.004016531,-0.142024753,0.13399169,  High Endorsement ¡Á Extreme Partisan,EndExtreme,Rated Response
+4.1,,,,    ,NA,Rated Response
+5,,,,Outlet Slant ¡Á Extreme Partisan:,NA,Rated Response
+5.01,0.146893658,-0.018145978,0.31193329,  Favored One's Own Party ¡Á Extreme Partisan,OutletExtreme,Rated Response
+5.02,0,0,0,  Neutral Outlet ¡Á Extreme Partisan,OutletExtreme,Rated Response
+5.03,-0.206487885,-0.384061552,-0.02891422,  Favored The Other Party ¡Á Extreme Partisan,OutletExtreme,Rated Response
+5.1,,,,     ,NA,Rated Response
+6,,,,Message Slant ¡Á Extreme Partisan:,NA,Rated Response
+6.01,0.16118027,0.00025907,0.32210147,  Biased Towards One's Own Party ¡Á Extreme Partisan,MsgExtreme,Rated Response
+6.02,0,0,0,  Neutral Message ¡Á Extreme Partisan,MsgExtreme,Rated Response
+6.03,-0.214777816,-0.390993428,-0.0385622,  Biased Towards The Other Party ¡Á Extreme Partisan,MsgExtreme,Rated Response
