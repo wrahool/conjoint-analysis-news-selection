@@ -1,0 +1,14 @@
+,pe,lower,upper,var,group,subsetlabel
+1,,,,Endorsement:,NA,Rated Response
+1.01,0.153595683,0.079604967,0.227586399,  Low Endorsement,End,Rated Response
+1.02,0.134065474,0.06147787,0.206653077,  High Endorsement,End,Rated Response
+1.1,,,, ,NA,Rated Response
+2,,,,Outlet Slant:,NA,Rated Response
+2.01,0.350317734,0.263566805,0.437068663,  Favored One's Own Party,Outlet,Rated Response
+2.02,0.180516169,0.092436865,0.268595472,  Neutral Outlet,Outlet,Rated Response
+2.03,-0.101113773,-0.192925573,-0.009301973,  Favored The Other Party,Outlet,Rated Response
+2.1,,,,  ,NA,Rated Response
+3,,,,Message Slant:,NA,Rated Response
+3.01,0.322014335,0.234558205,0.409470464,  Biased Towards One's Own Party,Msg,Rated Response
+3.02,0.16041852,0.072493967,0.248343073,  Neutral Message,Msg,Rated Response
+3.03,-0.033273458,-0.123971842,0.057424926,  Biased Towards The Other Party,Msg,Rated Response

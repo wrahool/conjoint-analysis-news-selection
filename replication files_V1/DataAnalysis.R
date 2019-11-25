@@ -104,3 +104,61 @@ get_RobustTable(RatedResponse~highEnd*strongPID+oppOutlet*strongPID+ownOutlet*st
                   oppMsg*strongPID+ownMsg*strongPID,Republican)
 
 
+#robust 4-Run regressions to use coefficients to validate results for RQ1/RQ2
+extraColDat<-dat
+#RQ1
+extraColDat$DefMessage<-(extraColDat$ownMsg-extraColDat$oppMsg)
+extraColDat$DefOutlet<-(extraColDat$ownOutlet-extraColDat$oppOutlet)
+get_RobustTable(ForcedResponse~highEnd+oppMsg+DefMessage+oppOutlet+DefOutlet,extraColDat)
+get_RobustTable(RatedResponse~highEnd+oppMsg+DefMessage+oppOutlet+DefOutlet,extraColDat)
+
+#RQ2
+extraColDat$SumOutMsgOutlet<-(extraColDat$oppMsg+extraColDat$oppOutlet)
+extraColDat$SumInMsgOutlet<-(extraColDat$ownMsg+extraColDat$ownOutlet)
+get_RobustTable(ForcedResponse~highEnd+oppMsg+SumOutMsgOutlet+ownMsg+SumInMsgOutlet,extraColDat)
+get_RobustTable(RatedResponse~highEnd+oppMsg+SumOutMsgOutlet+ownMsg+SumInMsgOutlet,extraColDat)
+
+#robust 5-Run subgroup analysis according to Leeper et al., 2019 
+dat$PID<-as.factor(dat$strongPID)
+dat$outlet<-dat$outlet.slant
+levels(dat$outlet)<-c("C","Neu","P")
+mm_by_PID_F <- cj(
+  subset(dat, !is.na(PID)),
+  ForcedResponse~endorsement.level+message.slant+outlet,
+  id = ~ id,
+  estimate = "mm_diff",
+  by = ~ PID
+)
+plot(
+  mm_by_PID_F, 
+  vline = 0, 
+  xlim = c(-0.08,0.08), 
+  xlab = "Estimated Difference in Marginal Means"
+) +
+  scale_colour_manual("feature", values = rep("Black", 9)) +
+  ggplot2::theme(legend.position = "none")
+
+mm_by_PID_R <- cj(
+  subset(dat, !is.na(PID)),
+  RatedResponse~endorsement.level+message.slant+outlet,
+  id = ~ id,
+  estimate = "mm_diff",
+  by = ~ PID
+)
+plot(
+  mm_by_PID_R, 
+  vline = 0, 
+  xlim = c(-.5,.5), 
+  xlab = "Estimated Difference in Marginal Means"
+) +
+  scale_colour_manual("feature", values = rep("Black", 9)) +
+  ggplot2::theme(legend.position = "none")
+
+
+cj_anova(dat, ForcedResponse ~ endorsement.level, id = ~ id, by = ~ PID)
+cj_anova(dat, ForcedResponse ~ message.slant, id = ~ id, by = ~ PID)
+cj_anova(dat, ForcedResponse ~ outlet, id = ~ id, by = ~ PID)
+
+cj_anova(dat, RatedResponse ~ endorsement.level, id = ~ id, by = ~ PID)
+cj_anova(dat, RatedResponse ~ message.slant, id = ~ id, by = ~ PID)
+cj_anova(dat, RatedResponse ~ outlet, id = ~ id, by = ~ PID)

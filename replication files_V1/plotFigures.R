@@ -135,3 +135,13 @@ draw_plot(dat,c(-.5,.5),seq(-.5,.5,.1), c("-.5","-.4","-.3","-.2","-.1","0",".1"
 ggsave("FA10-1.pdf",width=12,height=6)
 draw_plot(dat,c(-.15,.15),seq(-.15,.15,.03), c("-.15","-.12","-.09","-.06","-.03","0",".03",".06",".09",".12",".15") )
 ggsave("FA10-2.pdf",width=12,height=6)
+
+#Figure A11 - Interaction Robustness
+ForcedR<-read.csv("ForcedInteractionRobust.csv")
+RatedR<-read.csv("RatedInteractionRobust.csv")
+dat<-rbind(ForcedR,RatedR)
+dat$var <- factor(dat$var, levels=rev(unique(dat$var)))
+draw_plot(dat,c(-.5,.5),seq(-.5,.5,.1), c("-.5","-.4","-.3","-.2","-.1","0",".1",".2",".3",".4",".5") )
+ggsave("FA11-1.pdf",width=12,height=6)
+draw_plot(dat,c(-.15,.15),seq(-.15,.15,.03), c("-.15","-.12","-.09","-.06","-.03","0",".03",".06",".09",".12",".15") )
+ggsave("FA11-2.pdf",width=12,height=6)
